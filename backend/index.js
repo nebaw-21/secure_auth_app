@@ -10,6 +10,7 @@ import SubscribedUserRouter from "./routes/SubscribedUserRouter.js";
 import RegisterUserForEventRouter from "./routes/RegisterForEventRoutes.js";
 import EmailRouter from "./routes/EmailRouter.js";
 import ContactUsRouter from "./routes/ContactUsRouter.js";
+import VerifyEmailRouter from "./routes/verifyEmailRouter.js"
 import cors from "cors";
 
 dotenv.config();
@@ -23,6 +24,7 @@ app.use(express.urlencoded({ extended:false}));
 
 //routes
 app.use("/api/user", UserRouter);
+app.use("/api/verify",VerifyEmailRouter)
 app.use("/api/gallery", GalleryRouter);
 app.use("/api/blog", BlogRouter);
 app.use("/api/event", EventRouter);
